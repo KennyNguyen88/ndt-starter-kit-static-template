@@ -12,11 +12,11 @@ module.exports = {
     },
     module: {
         rules: [
+            { parser: { amd: false } },
             loaders.PugLoader,
             loaders.SCSSLoader,
             loaders.PostCSSLoader,
             loaders.JSLoader,
-            loaders.ESLintLoader,
             loaders.IMGLoader,
             loaders.FONTLoader
         ]
