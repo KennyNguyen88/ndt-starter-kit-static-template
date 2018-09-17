@@ -2,20 +2,40 @@ extends template/site
 block title
     title Home | Static Web Starter Kit
 block main
-    .container
-        h1 Static Web Starter Kit
-        h3 PUG, SCSS, POSTCSS, ES6, ESLINT, STYLELINT, WEBPACK
-        -
-            var logos = [
-                    'pugjs.svg',
-                    'sass.png',
-                    'postcss.png',
-                    'babel.png',
-                    'es6.png',
-                    'eslint.png',
-                    'stylelint.png',
-                    'webpack.svg'
-            ];
-        ul.logo-list
-            each logo in logos
-                li.logo-item: img(src="images/"+logo)
+    .main
+        .container
+            h1 Static Web Starter Kit
+            h3 PUG, SCSS, POSTCSS, ES6, ESLINT, STYLELINT, WEBPACK
+            -
+                var logos = [
+                        'pugjs.svg',
+                        'sass.png',
+                        'postcss.png',
+                        'babel.png',
+                        'es6.png',
+                        'eslint.png',
+                        'stylelint.png',
+                        'webpack.svg'
+                ];
+            ul.logo-list
+                each logo in logos
+                    li.logo-item: img(src="images/"+logo)
+            ul.collapsible
+                li
+                    .collapsible-header
+                        i.material-icons filter_drama
+                        | First
+                    .collapsible-body
+                        span Lorem ipsum dolor sit amet.
+                li
+                    .collapsible-header
+                        i.material-icons place
+                        | Second
+                    .collapsible-body
+                        span Lorem ipsum dolor sit amet.
+                li
+                    .collapsible-header
+                        i.material-icons whatshot
+                        | Third
+                    .collapsible-body
+                        span Lorem ipsum dolor sit amet.

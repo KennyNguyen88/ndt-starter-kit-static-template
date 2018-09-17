@@ -34,5 +34,8 @@
   "scripts": {
     "build": "webpack --config webpack.prod.js --display-error-details",
     "dev": "webpack-dev-server --open --config webpack.dev.js --display-error-details"
+  },
+  "dependencies": {
+    "materialize-css": "^1.0.0-rc.2"
   }
 }
