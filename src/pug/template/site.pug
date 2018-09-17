@@ -1,0 +1,18 @@
+doctype html
+include ../mixin/_index
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="shortcut icon" href="images/favicon.ico" type="image/x-icon")
+        block title
+            title Static Web Starter Kit
+        link(href="app.bundle.css" rel="stylesheet")
+    body
+        block header
+            include ../component/common/header
+        block main
+
+        block footer
+            include ../component/common/footer
+        script(type="text/javascript" src="js/app.bundle.js")
