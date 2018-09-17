@@ -25,7 +25,7 @@ const pug_folder = "./src/pug";
 
 const HtmlExtractPlugin_Index = new _HtmlWebpackPlugin({
     filename: "index.html",
-    template: `${pug_folder}/index.pug`
+    template: `${pug_folder}/home.pug`
 });
 
 module.exports = {

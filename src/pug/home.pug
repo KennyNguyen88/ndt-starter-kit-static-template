@@ -1,0 +1,22 @@
+doctype
+html
+    head
+        title Starter Kit
+    body
+        .container
+            h1 Static Web Starter Kit
+            h3 PUG, SCSS, POSTCSS, ES6, ESLINT, STYLELINT, WEBPACK
+            -
+                var logos = [
+                        'pugjs.svg',
+                        'sass.png',
+                        'postcss.png',
+                        'babel.png',
+                        'es6.png',
+                        'eslint.png',
+                        'stylelint.png',
+                        'webpack.svg'
+                ];
+            ul.logo-list
+                each logo in logos
+                    li.logo-item: img(src="images/"+logo)
