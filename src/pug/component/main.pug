@@ -1,0 +1,33 @@
+-
+    var title = "EMAIL STARTER KIT";
+    var sub_title = "PUG, INLINECSS, WEBPACK"
+table(style="width: 100%; padding: 0;")
+    tr(valign="middle" style="vertical-align: middle")
+        td.main__title(
+        valign="middle"
+        style={'text-align': 'center',
+            'font-size': '60px',
+            'color' : '#ffffff',
+            'vertical-align': 'middle'}
+        )=title
+    tr(valign="middle" style="vertical-align: middle")
+        td.main__subtitle(
+        valign="middle"
+        style={
+            'text-align': 'center',
+            'font-size': '30px',
+            'color': '#ffffff',
+            'vertical-align': 'middle'
+        }
+        )=sub_title
+    tr(valign="middle" style="vertical-align: middle")
+        table(style="width: 60%; padding: 0; margin:auto")
+            tr
+            -
+                var logos = [
+                    'pugjs.svg',
+                    'webpack.svg'
+                ]
+            each logo in logos
+                td(valign="middle" align="center")
+                    img(src="images/"+logo style="width:100px; height: auto")

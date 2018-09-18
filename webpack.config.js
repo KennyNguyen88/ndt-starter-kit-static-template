@@ -13,18 +13,14 @@ module.exports = {
     module: {
         rules: [
             loaders.PugLoader,
-            loaders.SCSSLoader,
-            loaders.PostCSSLoader,
-            loaders.JSLoader,
-            loaders.ESLintLoader,
+            loaders.CSSLoader,
             loaders.IMGLoader,
             loaders.FONTLoader
         ]
     },
     plugins: [
-        plugins.CSSExtractPlugin,
-        plugins.StyleLintPlugin,
         plugins.CleanWebpackPlugin,
-        plugins.HtmlExtractPlugin.HtmlExtractPlugin_Index
+        plugins.HtmlExtractPlugin.HtmlExtractPlugin_Index,
+        plugins.HtmlWebpackInlineStylePlugin
     ],
 };

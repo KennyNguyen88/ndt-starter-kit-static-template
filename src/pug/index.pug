@@ -1,0 +1,16 @@
+extends template/email
+block title
+    title Email | Static Web Starter Kit
+block main
+    table.wrapper
+        tr.header__row
+            td.header__col
+                include ./component/header
+        tr.main__row
+            td.main__col
+                include ./component/main
+        tr.footer__row
+            td.footer__col
+                include ./component/footer
+
+

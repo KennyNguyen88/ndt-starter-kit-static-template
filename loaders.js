@@ -5,53 +5,14 @@ const PugLoader = {
     use: 'pug-loader'
 };
 
-const SCSSLoader = {
-    test: /\.scss$/,
-    use: plugins.CSSExtractPlugin.extract({
-        fallback: 'style-loader',
-        use: [
-            {
-                loader: 'css-loader',
-                options: {importLoaders: 1},
-            },
-            {
-                loader: 'resolve-url-loader'
-            },
-            {
-                loader: 'sass-loader',
-                options:{
-                    allChunks: true
-                }
-            }
-        ],
-    }),
-};
-
-const PostCSSLoader = {
+const CSSLoader = {
     test: /\.css$/,
-    use: [ 'style-loader', 'postcss-loader' ]
-};
-
-const JSLoader = {
-    test: /\.js$/,
-    exclude: /node_modules/,
     use: {
-        loader: 'babel-loader',
+        loader: 'file-loader',
         options: {
-            presets: ['env']
+            name: '[name].css',
+            outputPath: 'css/'
         }
-    }
-};
-
-const ESLintLoader = {
-    test: /\.js$/,
-    enforce: 'pre',
-    exclude: /node_modules/,
-    use: {
-        loader: 'eslint-loader',
-        options: {
-            configFile: __dirname + '/.eslintrc'
-        },
     }
 };
 
@@ -79,10 +40,7 @@ const FONTLoader = {
 
 module.exports = {
     PugLoader: PugLoader,
-    SCSSLoader: SCSSLoader,
-    PostCSSLoader: PostCSSLoader,
-    JSLoader: JSLoader,
-    ESLintLoader: ESLintLoader,
+    CSSLoader: CSSLoader,
     IMGLoader: IMGLoader,
     FONTLoader: FONTLoader
 };
