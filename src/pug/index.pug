@@ -2,15 +2,22 @@ extends template/email
 block title
     title Email | Static Web Starter Kit
 block main
-    table.wrapper
-        tr.header__row
-            td.header__col
-                include ./component/header
-        tr.main__row
-            td.main__col
-                include ./component/main
-        tr.footer__row
-            td.footer__col
-                include ./component/footer
+    div(style="background-color: #ffffff")
+        center
+            <!--[if gte mso 9]>
+            <table align="center" bgcolor="#ffffff" cellpadding="0" cellspacing="0" width="600" >
+            <![endif]-->
+            <!--[if !mso]><!-->
+            table.wrapper(bgcolor="#3eb5e5")
+                <!--<![endif]-->
+                tr.header__row
+                    td.header__col
+                        include ./component/header
+                tr.main__row
+                    td.main__col
+                        include ./component/main
+                tr.footer__row
+                    td.footer__col
+                        include ./component/footer
 
 

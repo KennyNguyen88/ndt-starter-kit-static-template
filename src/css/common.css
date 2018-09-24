@@ -1,0 +1,35 @@
+body{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width:600px !important;
+}
+table{
+    table-layout: fixed;
+}
+.mobile {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+}
+.wrapper{
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+@media only screen and (max-width: 480px) {
+    .mobile {
+        display: table !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    .tablet {
+        max-height: 0;
+        display: none;
+        mso-hide:all!important;
+        overflow: hidden;
+    }
+    div.mobile{
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+

@@ -1,0 +1,17 @@
+table{
+    table-layout: fixed;
+}
+@media only screen and (max-width: 480px) {
+    .tablet {
+        max-height: 0;
+        display: none;
+        mso-hide:all!important;
+        overflow: hidden;
+    }
+
+    .mobile {
+        display: block !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}
